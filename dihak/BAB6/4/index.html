@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tugas 4</title>
+<style type="text/css">
+body {
+    background: #0095ff;
+}
+#content {
+    width: 500px;
+    background: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    margin-top: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.49);
+    padding: 20px;
+    text-align: center;
+}
+#content h1 {
+    font-size: 25px;
+}
+form {
+    line-height: 40px;
+}
+tr {
+    text-align: left;
+}
+
+tr td:nth-child(1) {
+    width: 150px;
+    vertical-align: top;
+}
+
+table {margin: auto;}
+
+tr td:nth-child(2):before {content: ':';margin-right: 10px;vertical-align: top;}
+
+input[type="text"], textarea {
+    width: 230px;
+    padding: 10px;
+}
+input[type="submit"] {
+	margin-top: 10px;
+    background: #0095ff;
+    padding: 10px;
+    color: #Fff;
+    border: none;
+    cursor: pointer;
+}
+</style>
+</head>
+<body>
+<div id="content">
+	<h1>Pendaftaran Online</h1>
+	<p>Isikan form dibawah ini :</p>
+	<form method="post" action="hasil.php">
+		<table>
+			<tbody>
+				<tr>
+					<td>Nama Lengkap</td>
+					<td><input type="text" name="namalengkap" placeholder="Masukan nama lengkap"></input></td>
+				</tr>
+				<tr>
+					<td>Tempat Lahir</td>
+					<td><input type="text" name="tmplahir" placeholder="Masukan tempat lahir"></input></td>
+				</tr>
+				<tr>
+					<td>Tanggal Lahir</td>
+					<td><select name="tgl"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option><option value="13">13</option><option value="14">14</option><option value="15">15</option><option value="16">16</option><option value="17">17</option><option value="18">18</option><option value="19">19</option><option value="20">20</option><option value="21">21</option><option value="22">22</option><option value="23">23</option><option value="24">24</option><option value="25">25</option><option value="26">26</option><option value="27">27</option><option value="28">28</option><option value="29">29</option><option value="30">30</option><option value="31">31</option></select><span> Bulan : </span><select name="bln"><option value="1">1</option><option value="2">2</option><option value="3">3</option><option value="4">4</option><option value="5">5</option><option value="6">6</option><option value="7">7</option><option value="8">8</option><option value="9">9</option><option value="10">10</option><option value="11">11</option><option value="12">12</option></select><span> Tahun : </span><select name="thn"><option value="1970">1970</option><option value="1971">1971</option><option value="1972">1972</option><option value="1973">1973</option><option value="1974">1974</option><option value="1975">1975</option><option value="1976">1976</option><option value="1977">1977</option><option value="1978">1978</option><option value="1979">1979</option><option value="1980">1980</option><option value="1981">1981</option><option value="1982">1982</option><option value="1983">1983</option><option value="1984">1984</option><option value="1985">1985</option><option value="1986">1986</option><option value="1987">1987</option></select></td>
+				</tr>
+				<tr>
+					<td>Alamat Rumah</td>
+					<td><textarea name="Alamat" style="height: 100px"></textarea></td>
+				</tr>
+				<tr>
+					<td>Jenis Kelamin</td>
+					<td><input type="radio" name="klmn" value="Laki laki"> Laki laki<input type="radio" name="klmn" value="Perempuan"> Perempuan</td>
+				</tr>
+				<tr>
+					<td>Asal Sekolah</td>
+					<td><input type="text" placeholder="Masukan asal sekolah" name="sekolah"></input></td>
+				</tr>
+				<tr>
+					<td>Nilai UAN</td>
+					<td><input type="text" name="nilaiuan" placeholder="Masukan Nilai Uan"></input></td>
+				</tr>
+			</tbody>
+		</table>
+		<input type="submit" name="submit" value="Submit" />
+	</form>
+</div>
+<script type="text/javascript">
+var html = ''
+for (var i = 1970; i < 1988; i++) {
+	html += '<option value="'+i+'">'+i+'</option>'
+}
+console.log(html)
+</script>
+</body>
+</html>
